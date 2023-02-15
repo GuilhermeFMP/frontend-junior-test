@@ -1,9 +1,18 @@
+import React from 'react';
 import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import Home from './pages/Home';
+import AddToken from './pages/AddToken';
+import EditToken from './pages/EditToken';
 
 function App() {
   return (
     <div className="App">
-      <h1>Começando o projeto</h1>
+      <Switch>
+        <Route exact path='/' component={ Home } />
+        <Route exact path='/add-token' component={ AddToken } />
+        <Route exact path='/edit-token' component={ EditToken } />
+      </Switch>
     </div>
   );
 }
