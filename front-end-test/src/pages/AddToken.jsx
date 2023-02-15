@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from '../components/Header';
 
 function AddToken() {
   return(
     <div>
-      <h1>AddToken</h1>
+      <Header />
     </div>
   );
 }
