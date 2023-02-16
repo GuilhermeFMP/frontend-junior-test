@@ -14,7 +14,7 @@ function Header(props) {
         <h1><strong>Wish Wallet</strong></h1>
       </div>
       <div>
-        { button && <Button variant="primary" onClick={ () => history.push('/add-token') }><strong>Add Token</strong></Button>}
+        { button && <Button className='button' variant="primary" onClick={ () => history.push('/add-token') }><strong>Add Token</strong></Button>}
       </div>
     </div>
   );
