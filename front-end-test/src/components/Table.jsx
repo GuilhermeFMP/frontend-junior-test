@@ -6,6 +6,12 @@ import { faPenToSquare } from '@fortawesome/free-solid-svg-icons';
 function Table() {
   const storage = JSON.parse(localStorage.getItem('userTokens')) || [];
   const history = useHistory();
+
+  const editPage = (id) => {
+    localStorage.setItem('TokenEdit', JSON.stringify(id));
+    history.push('/edit-token')
+  }
+
   return(
     <div className='table-container'>
       <div className='tr-container'>
@@ -19,7 +25,8 @@ function Table() {
               <button
                 id='edit-button'
                 type="button"
-                onClick={ () => history.push('/edit-token') }
+                name={ token.name }
+                onClick={ () => editPage(token.id) }
               >
                 <FontAwesomeIcon id="icon" icon={ faPenToSquare } />
               </button>

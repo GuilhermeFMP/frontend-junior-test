@@ -190,3 +190,7 @@ label {
   flex-direction: column;
   align-items: center;
 }
+
+.no-button {
+  margin-left: 10px;
+}
